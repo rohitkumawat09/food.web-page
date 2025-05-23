@@ -610,7 +610,7 @@ form textarea {
 
 @media (max-width: 768px) {
   .reservation-container {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 
   .form-row {
@@ -718,66 +718,80 @@ form textarea {
 
 
 
+/* Section Title */
+.testimonial-title {
+  color: #f39c12;
+  font-family: 'Segoe Script', cursive;
+  font-size: 1.5rem;
+}
+
+/* Main Heading */
+.testimonial-section h2 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Testimonial Card Styling */
+.testimonial-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  height: 100%;
+}
+
+.testimonial-card:hover {
+  background-color: #fca311;
+  color: white;
+}
+
+.testimonial-card:hover .quote,
+.testimonial-card:hover h5,
+.testimonial-card:hover small {
+  color: white;
+}
+
+.testimonial-card .quote {
+  font-size: 2rem;
+  color: #fca311;
+  margin-bottom: 15px;
+}
+
+.testimonial-card.active {
+  background-color: #fca311;
+  color: white;
+}
+.testimonial-card.active .quote,
+.testimonial-card.active h5,
+.testimonial-card.active small {
+  color: white;
+}
+
+.testimonial-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #fca311;
+}
 
 
+@media (max-width: 767.98px) {
+  .testimonial-section h2 {
+    font-size: 2rem;
+  }
 
+  .testimonial-card {
+    padding: 20px;
+  }
 
-
-
-
-
-
-
-
-
-
-    .testimonial-title {
-      color: #f39c12;
-      font-family: 'Segoe Script', cursive;
-      font-size: 1.5rem;
-    }
-
-    .testimonial-section h2 {
-      font-weight: bold;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-    }
-
-    .testimonial-card {
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 30px;
-      transition: all 0.3s ease-in-out;
-      height: 100%;
-    }
-
-    .testimonial-card.active {
-      background-color: #fca311;
-      color: white;
-    }
-
-    .testimonial-card .quote {
-      font-size: 2rem;
-      color: #fca311;
-    }
-
-    .testimonial-card.active .quote {
-      color: white;
-    }
-
-    .testimonial-img {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-right: 15px;
-    }
-
-    .carousel-indicators [data-bs-target] {
-      background-color: #fca311;
-    }
-
-
+  .testimonial-card .quote {
+    font-size: 1.5rem;
+  }
+}
 
 
     /* ------------------------ */
