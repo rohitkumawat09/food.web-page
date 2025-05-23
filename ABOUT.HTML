@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Restoran</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    /* Hero Banner */
+    .hero {
+      background: url('./img/about-hero.jpg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero h1 {
+      position: relative;
+      font-size: 3rem;
+      font-weight: 700;
+      z-index: 1;
+    }
+
+    /* Section titles */
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-title h2 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .section-title p {
+      color: #6c757d;
+      font-size: 1.1rem;
+    }
+
+    /* Mission & Vision */
+    .mission-vision {
+      background: #f9f9f9;
+      padding: 3rem 0;
+    }
+    .mission-vision .box {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .mission-vision .box i {
+      font-size: 3rem;
+      color: #ff7f50;
+      margin-bottom: 1rem;
+    }
+    .mission-vision .box h3 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    /* Why Choose Us */
+    .why-choose {
+      padding: 3rem 0;
+    }
+    .why-choose .item {
+      text-align: center;
+      padding: 2rem;
+      border-radius: 12px;
+      transition: box-shadow 0.3s ease;
+      border: 1px solid #ddd;
+      background: #fff;
+    }
+    .why-choose .item:hover {
+      box-shadow: 0 8px 20px rgba(255, 127, 80, 0.3);
+    }
+    .why-choose .item i {
+      font-size: 3rem;
+      color: #ff7f50;
+      margin-bottom: 1rem;
+    }
+    .why-choose .item h5 {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Team */
+    .team .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .team .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .team .card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .team .card-body {
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .team .card-body h5 {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .team .card-body p {
+      color: #777;
+      margin-bottom: 0;
+    }
+
+    /* Testimonials */
+    .testimonial {
+      background: #ff7f50;
+      color: white;
+      padding: 3rem 1rem;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: 0 auto;
+      font-style: italic;
+      box-shadow: 0 10px 30px rgba(255,127,80,0.4);
+    }
+    .testimonial .author {
+      margin-top: 1rem;
+      font-weight: 700;
+      text-align: right;
+      font-style: normal;
+    }
+
+    /* Stats */
+    .stats {
+      background: #f9f9f9;
+      padding: 3rem 0;
+      text-align: center;
+    }
+    .stats .stat-item {
+      margin-bottom: 2rem;
+    }
+    .stats .stat-item h3 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ff7f50;
+    }
+    .stats .stat-item p {
+      font-weight: 600;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #ddd;
+      padding: 2rem 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+      <img src="https://themewagon.github.io/foodwagon/v1.0.0/assets/img/gallery/logo.svg" alt="Logo" width="40" class="me-2" />
+      Restoran
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto fw-semibold">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+        <li class="nav-item"><a class="nav-link" href="foodmenu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Banner -->
+<section class="hero mb-5">
+  <h1>Discover Our Story</h1>
+</section>
+
+<!-- Our Story -->
+<section class="container mb-5">
+  <div class="section-title">
+    <h2>About Restoran</h2>
+    <p>Delighting your taste buds since 2010</p>
+  </div>
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img src="./img/about-2.jpg" alt="Our Story" class="img-fluid rounded shadow" />
+    </div>
+    <div class="col-md-6">
+      <p>
+        At Restoran, we believe great food comes from passion and quality ingredients.
+        Founded in 2010, our journey began as a humble kitchen with a dream to bring
+        authentic flavors and warm hospitality to our community. Our chefs craft every dish
+        with care, blending traditional recipes with modern twists.
+      </p>
+      <p>
+        Whether you're dining with family or friends, our goal is to make you feel at home,
+        enjoying unforgettable moments over delicious meals.
+      </p>
+      <a href="foodmenu.html" class="btn btn-warning text-white mt-3">View Our Menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="mission-vision">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="box">
+          <i class="fas fa-bullseye"></i>
+          <h3>Our Mission</h3>
+          <p>To serve mouthwatering dishes made with love and freshest ingredients, creating memorable dining experiences.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="box">
+          <i class="fas fa-eye"></i>
+          <h3>Our Vision</h3>
+          <p>Become the leading restaurant renowned for culinary excellence and exceptional hospitality in our region.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-choose container mb-5">
+  <div class="section-title">
+    <h2>Why Choose Us</h2>
+    <p>What sets Restoran apart from others</p>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="item">
+        <i class="fas fa-seedling"></i>
+        <h5>Fresh Ingredients</h5>
+        <p>We use only fresh, locally-sourced produce for the best taste and quality.</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="item">
+        <i class="fas fa-utensils"></i>
+        <h5>Expert Chefs</h5>
+        <p>Our talented chefs craft each dish with passion and precision.</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="item">
+        <i class="fas fa-heart"></i>
+        <h5>Warm Atmosphere</h5>
+        <p>Enjoy a cozy, welcoming environment perfect for any occasion.</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="item">
+        <i class="fas fa-award"></i>
+        <h5>Award-Winning</h5>
+        <p>Recognized for excellence by culinary critics and customers alike.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Team -->
+<section class="team container mb-5">
+  <div class="section-title">
+    <h2>Meet Our Team</h2>
+    <p>The culinary masters behind your favorite dishes</p>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="card">
+        <img src="./img/team-1.jpg" alt="Chef Mario" />
+        <div class="card-body">
+          <h5>Chef Mario</h5>
+          <p>Head Chef</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="./img/team-2.jpg" alt="Chef Anna" />
+        <div class="card-body">
+          <h5>Chef Anna</h5>
+          <p>Pastry Expert</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="./img/team-3.jpg" alt="Chef Liam" />
+        <div class="card-body">
+          <h5>Chef Liam</h5>
+          <p>BBQ Specialist</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img src="./img/team-4.jpg" alt="Chef Sofia" />
+        <div class="card-body">
+          <h5>Chef Sofia</h5>
+          <p>Sous Chef</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="container mb-5 text-center">
+  <div class="section-title">
+    <h2>What Our Customers Say</h2>
+    <p>Real feedback from our happy diners</p>
+  </div>
+  <div class="testimonial">
+    <p>"Restoran offers the best food experience I've ever had! Every dish is a masterpiece. The staff is friendly and the atmosphere is perfect for family dinners."</p>
+    <div class="author">— Sarah Johnson</div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-3 stat-item">
+        <h3>15+</h3>
+        <p>Years of Experience</p>
+      </div>
+      <div class="col-md-3 stat-item">
+        <h3>1000+</h3>
+        <p>Happy Customers</p>
+      </div>
+      <div class="col-md-3 stat-item">
+        <h3>50+</h3>
+        <p>Master Chefs</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Restoran. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

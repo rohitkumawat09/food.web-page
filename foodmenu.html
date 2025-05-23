@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Food Menu</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #fff8f0;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    color: #d35400;
+  }
+  .menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  .food-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  .food-item:hover {
+    transform: scale(1.05);
+  }
+  .food-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  .food-info {
+    padding: 15px;
+  }
+  .food-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e67e22;
+    margin: 0 0 8px;
+  }
+  .food-price {
+    color: #888;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Delicious Food Menu</h1>
+
+<div class="menu-container">
+  <!-- Food item 1 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80" alt="Burger" />
+    <div class="food-info">
+      <h3 class="food-name">Classic Burger</h3>
+      <p class="food-price">$8.99</p>
+    </div>
+  </div>
+  <!-- Food item 2 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=400&q=80" alt="Pizza" />
+    <div class="food-info">
+      <h3 class="food-name">Pepperoni Pizza</h3>
+      <p class="food-price">$12.99</p>
+    </div>
+  </div>
+  <!-- Food item 3 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80" alt="Pasta" />
+    <div class="food-info">
+      <h3 class="food-name">Spaghetti Carbonara</h3>
+      <p class="food-price">$10.50</p>
+    </div>
+  </div>
+  <!-- Food item 4 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Salad" />
+    <div class="food-info">
+      <h3 class="food-name">Caesar Salad</h3>
+      <p class="food-price">$7.00</p>
+    </div>
+  </div>
+  <!-- Food item 5 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1572441710431-bb066a90401b?auto=format&fit=crop&w=400&q=80" alt="Sushi" />
+    <div class="food-info">
+      <h3 class="food-name">Sushi Platter</h3>
+      <p class="food-price">$15.99</p>
+    </div>
+  </div>
+  <!-- Food item 6 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1514516870726-3b5e8f03ae5c?auto=format&fit=crop&w=400&q=80" alt="Tacos" />
+    <div class="food-info">
+      <h3 class="food-name">Beef Tacos</h3>
+      <p class="food-price">$9.50</p>
+    </div>
+  </div>
+  <!-- Food item 7 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" alt="Steak" />
+    <div class="food-info">
+      <h3 class="food-name">Grilled Steak</h3>
+      <p class="food-price">$18.99</p>
+    </div>
+  </div>
+  <!-- Food item 8 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=400&q=80" alt="Ice Cream" />
+    <div class="food-info">
+      <h3 class="food-name">Vanilla Ice Cream</h3>
+      <p class="food-price">$4.50</p>
+    </div>
+  </div>
+  <!-- Food item 9 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="French Fries" />
+    <div class="food-info">
+      <h3 class="food-name">French Fries</h3>
+      <p class="food-price">$3.99</p>
+    </div>
+  </div>
+  <!-- Food item 10 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=400&q=80" alt="Pancakes" />
+    <div class="food-info">
+      <h3 class="food-name">Fluffy Pancakes</h3>
+      <p class="food-price">$6.99</p>
+    </div>
+  </div>
+  <!-- Food item 11 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1543779501-d7e5219d7b1f?auto=format&fit=crop&w=400&q=80" alt="Sandwich" />
+    <div class="food-info">
+      <h3 class="food-name">Club Sandwich</h3>
+      <p class="food-price">$8.00</p>
+    </div>
+  </div>
+  <!-- Food item 12 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=400&q=80" alt="Soup" />
+    <div class="food-info">
+      <h3 class="food-name">Tomato Soup</h3>
+      <p class="food-price">$5.50</p>
+    </div>
+  </div>
+  <!-- Food item 13 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1565895405227-d55fc0e3f745?auto=format&fit=crop&w=400&q=80" alt="Rice" />
+    <div class="food-info">
+      <h3 class="food-name">Fried Rice</h3>
+      <p class="food-price">$9.00</p>
+    </div>
+  </div>
+  <!-- Food item 14 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=400&q=80" alt="Donut" />
+    <div class="food-info">
+      <h3 class="food-name">Chocolate Donut</h3>
+      <p class="food-price">$3.00</p>
+    </div>
+  </div>
+  <!-- Food item 15 -->
+  <div class="food-item">
+    <img class="food-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80" alt="Pasta" />
+    <div class="food-info">
+      <h3 class="food-name">Penne Arrabiata</h3>
+      <p class="food-price">$11.25</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
