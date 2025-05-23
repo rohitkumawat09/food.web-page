@@ -819,10 +819,43 @@ form textarea {
     align-items: center;
   }
 
-  .chef-card {
+  /* .chef-card {
+    border: 8px solid orange;
+    margin: 20px;
     width: 90%;
     height: auto;
+      transition: transform 0.3s, box-shadow 0.3s;
   }
+
+  .chef-card:hover {
+      transform: scale(1.02);
+  border-color: red;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+} */
+
+.chef-card {
+  border: 4px solid orange;
+  margin: 20px;
+  width: 90%;
+  height: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: borderCycle 5s infinite;
+}
+
+@keyframes borderCycle {
+  0%   { border-color: red; }
+  25%  { border-color: green; }
+  50%  { border-color: blue; }
+  75%  { border-color: purple; }
+  100% { border-color: orange; }
+}
+
+.chef-card:hover {
+  transform: scale(1.02);
+  border-color: red;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
 
   .footer {
     flex-direction: column;
@@ -840,3 +873,96 @@ form textarea {
 
 
 
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .good {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .text h1 {
+    font-size: 40px;
+  }
+
+  .text p {
+    font-size: 18px;
+  }
+
+  .rotateimge {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+  }
+
+  .best {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .best > div {
+    width: 45%;
+    height: auto;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Welcome {
+    text-align: center;
+  }
+
+  .Welcome h1:nth-child(2) {
+    font-size: 30px;
+  }
+
+  .Experience h1 {
+    font-size: 32px;
+  }
+
+  .menu-tabs {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .menu-column {
+    width: 100%;
+  }
+
+  .reservation-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .reservation-image,
+  .reservation-form {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .chefs-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .chef-card {
+    width: 45%;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .footer-section {
+    width: 45%;
+  }
+}
