@@ -745,218 +745,98 @@ form textarea {
 
 
 
-
-
-
-
-
-@media screen and (max-width: 992px) {
-  .top {
+@media screen and (min-width: 320px) and (max-width: 370px) {
+  .good {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .part1 img,
-  .part2 img {
-    width: 45vw;
-    height: auto;
-  }
-
-  .Years,
-  .Popular {
-    width: 100%;
-  }
-
-  .Welcome {
+    gap: 40px;
     text-align: center;
   }
-}
 
-
-@media (max-width: 768px) {
-  .best {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .best > div {
-    width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .best {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .best > div {
-    width: 90%;
-  }
-}
-
-
-
-@media (max-width: 768px) {
-
-
-  .form-row {
-    flex-direction: column;
-  }
-}
-
-
-@media (max-width: 767.98px) {
-  .testimonial-section h2 {
-    font-size: 2rem;
-  }
-
-  .testimonial-card {
-    padding: 20px;
-  }
-
-  .testimonial-card .quote {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-
-
-
-
-
-@media (max-width: 320px) {
-  /* General body adjustments */
-  body {
-    font-size: 14px;
-  }
-
-  /* Navbar adjustments */
-  .navbar {
-    padding: 15px;
-  }
-  .navbar-brand span {
-    font-size: 22px;
-  }
-  .nav-link {
-    margin-right: 10px;
-    font-size: 14px;
-  }
-
-  /* Hero section */
-  .backgundimg {
-    padding: 40px 0;
-  }
   .text h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
+
   .text p {
     font-size: 16px;
   }
+
   .rotateimge {
     width: 300px;
-    height: 200px;
+    height: 300px;
   }
 
-  /* Best section cards */
   .best {
     flex-direction: column;
-    gap: 20px;
-  }
-  .best > div {
-    width: 90%;
-    padding: 20px;
+    align-items: center;
   }
 
-  /* Top section images */
-  .part1 img,
-  .part2 img {
-    width: 80%;
+  .best > div {
+    width: 90%;
     height: auto;
   }
 
-  /* Welcome section */
-  .Welcome h1:nth-child(2) {
-    font-size: 28px;
-  }
-  .Welcome h1:first-child {
-    font-size: 20px;
-    margin-bottom: 8px;
+  .top {
+    flex-direction: column;
+    padding: 30px 10px;
   }
 
-  /* Experience section */
+  .part1 img,
+  .part2 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .Welcome h1:nth-child(2) {
+    font-size: 24px;
+  }
+
   .Experience h1 {
     font-size: 30px;
   }
 
-  /* Menu section */
   .menu-tabs {
     flex-direction: column;
-    align-items: center;
-  }
-  .menu-item {
-    flex-direction: column;
-    align-items: center;
-  }
-  .menu-item img {
-    width: 70px;
-    height: 70px;
+    gap: 10px;
   }
 
-  /* Reservation section */
+  .menu-column {
+    width: 100%;
+  }
+
   .reservation-container {
     flex-direction: column;
     height: auto;
   }
+
   .reservation-image,
   .reservation-form {
     width: 100%;
-  }
-  .video-play {
-    width: 60px;
-    height: 60px;
-    font-size: 20px;
-  }
-  form {
     padding: 20px;
   }
 
-  /* Chefs section */
+  .chefs-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .chef-card {
-    width: 80%;
-  }
-  .chef-card img {
-    width: 150px;
-    height: 150px;
+    width: 90%;
+    height: auto;
   }
 
-  /* Testimonials */
-  .testimonial-section h2 {
-    font-size: 1.8rem;
-  }
-  .testimonial-card {
-    padding: 15px;
-  }
-  .testimonial-card .quote {
-    font-size: 1.2rem;
-  }
-
-  /* Footer adjustments */
   .footer {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 20px;
   }
+
   .footer-section {
     width: 100%;
   }
-  .footer-section input[type="email"] {
-    width: 100%;
-  }
 }
+
+
+
+
+
+
+
