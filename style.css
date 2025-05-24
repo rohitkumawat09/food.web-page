@@ -16,13 +16,15 @@ margin: 0;
       font-size: 28px;
       font-weight: 700;
     }
+  
+
     .nav-link {
-      color: white;
-      margin-right: 15px;
-    }
-    .nav-link.active, .nav-link:hover {
-      color: #f59e0b;
-    }
+  color: white !important;
+  margin-right: 15px;
+}.nav-link.active,
+.nav-link:hover {
+  color: #f59e0b !important;
+}
     .btn-book {
       background-color: #f59e0b;
       color: white;

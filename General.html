@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>General Enquiry Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .form-container {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #051937;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #051937;
+      margin-bottom: 5px;
+    }
+
+    input, textarea, select {
+      padding: 12px;
+      font-size: 16px;
+      border: 1.8px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: orange;
+      outline: none;
+      box-shadow: 0 0 6px orange;
+    }
+
+    button {
+      background: orange;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: darkorange;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>General Enquiry</h2>
+    <form>
+      <label for="name">Your Name *</label>
+      <input type="text" id="name" placeholder="Enter your full name" required />
+
+      <label for="email">Your Email *</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number" />
+
+      <label for="enquiry-type">Enquiry Type *</label>
+      <select id="enquiry-type" required>
+        <option value="" disabled selected>Select enquiry type</option>
+        <option value="general">General Information</option>
+        <option value="product">Product Related</option>
+        <option value="support">Support</option>
+        <option value="feedback">Feedback</option>
+      </select>
+
+      <label for="message">Your Message *</label>
+      <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Submit Enquiry</button>
+    </form>
+       <a href="index.html" style="display:inline-block; margin: 20px 0; padding: 10px 20px; background-color:#d35400; color:#fff; text-decoration:none; border-radius:5px;">
+  ← Back to Home
+</a>
+  </div>
+
+  <script>
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    alert(' आपका फॉर्म   सफलतापूर्वक सबमिट हो गया। धन्यवाद!');
+    window.location.href = 'index.html'; // अपनी होमपेज URL यहाँ डालें
+  });</script>
+</body>
+</html>

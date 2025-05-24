@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Food Menu</title>
+<title>Food Menu with Details</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -29,6 +30,7 @@
     overflow: hidden;
     text-align: center;
     transition: transform 0.2s ease;
+    cursor: pointer;
   }
   .food-item:hover {
     transform: scale(1.05);
@@ -51,134 +53,223 @@
     color: #888;
     font-size: 16px;
   }
+
+  /* Details section styling */
+  #food-detail {
+    max-width: 600px;
+    margin: 40px auto 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: none; /* पहले छुपा रहे */
+  }
+  #food-detail img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  #food-detail h2 {
+    color: #d35400;
+    margin-top: 0;
+  }
+  #food-detail p {
+    font-size: 18px;
+    color: #555;
+  }
+  #food-detail .price {
+    font-size: 20px;
+    color: #e67e22;
+    font-weight: bold;
+  }
+  #food-detail .close-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: #e67e22;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
 </style>
 </head>
 <body>
 
 <h1>Delicious Food Menu</h1>
 
-<div class="menu-container">
-  <!-- Food item 1 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80" alt="Burger" />
-    <div class="food-info">
-      <h3 class="food-name">Classic Burger</h3>
-      <p class="food-price">$8.99</p>
-    </div>
-  </div>
-  <!-- Food item 2 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=400&q=80" alt="Pizza" />
-    <div class="food-info">
-      <h3 class="food-name">Pepperoni Pizza</h3>
-      <p class="food-price">$12.99</p>
-    </div>
-  </div>
-  <!-- Food item 3 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80" alt="Pasta" />
-    <div class="food-info">
-      <h3 class="food-name">Spaghetti Carbonara</h3>
-      <p class="food-price">$10.50</p>
-    </div>
-  </div>
-  <!-- Food item 4 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Salad" />
-    <div class="food-info">
-      <h3 class="food-name">Caesar Salad</h3>
-      <p class="food-price">$7.00</p>
-    </div>
-  </div>
-  <!-- Food item 5 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1572441710431-bb066a90401b?auto=format&fit=crop&w=400&q=80" alt="Sushi" />
-    <div class="food-info">
-      <h3 class="food-name">Sushi Platter</h3>
-      <p class="food-price">$15.99</p>
-    </div>
-  </div>
-  <!-- Food item 6 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1514516870726-3b5e8f03ae5c?auto=format&fit=crop&w=400&q=80" alt="Tacos" />
-    <div class="food-info">
-      <h3 class="food-name">Beef Tacos</h3>
-      <p class="food-price">$9.50</p>
-    </div>
-  </div>
-  <!-- Food item 7 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80" alt="Steak" />
-    <div class="food-info">
-      <h3 class="food-name">Grilled Steak</h3>
-      <p class="food-price">$18.99</p>
-    </div>
-  </div>
-  <!-- Food item 8 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=400&q=80" alt="Ice Cream" />
-    <div class="food-info">
-      <h3 class="food-name">Vanilla Ice Cream</h3>
-      <p class="food-price">$4.50</p>
-    </div>
-  </div>
-  <!-- Food item 9 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="French Fries" />
-    <div class="food-info">
-      <h3 class="food-name">French Fries</h3>
-      <p class="food-price">$3.99</p>
-    </div>
-  </div>
-  <!-- Food item 10 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=400&q=80" alt="Pancakes" />
-    <div class="food-info">
-      <h3 class="food-name">Fluffy Pancakes</h3>
-      <p class="food-price">$6.99</p>
-    </div>
-  </div>
-  <!-- Food item 11 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1543779501-d7e5219d7b1f?auto=format&fit=crop&w=400&q=80" alt="Sandwich" />
-    <div class="food-info">
-      <h3 class="food-name">Club Sandwich</h3>
-      <p class="food-price">$8.00</p>
-    </div>
-  </div>
-  <!-- Food item 12 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=400&q=80" alt="Soup" />
-    <div class="food-info">
-      <h3 class="food-name">Tomato Soup</h3>
-      <p class="food-price">$5.50</p>
-    </div>
-  </div>
-  <!-- Food item 13 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1565895405227-d55fc0e3f745?auto=format&fit=crop&w=400&q=80" alt="Rice" />
-    <div class="food-info">
-      <h3 class="food-name">Fried Rice</h3>
-      <p class="food-price">$9.00</p>
-    </div>
-  </div>
-  <!-- Food item 14 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=400&q=80" alt="Donut" />
-    <div class="food-info">
-      <h3 class="food-name">Chocolate Donut</h3>
-      <p class="food-price">$3.00</p>
-    </div>
-  </div>
-  <!-- Food item 15 -->
-  <div class="food-item">
-    <img class="food-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80" alt="Pasta" />
-    <div class="food-info">
-      <h3 class="food-name">Penne Arrabiata</h3>
-      <p class="food-price">$11.25</p>
-    </div>
-  </div>
+<div class="menu-container" id="menu">
+  <!-- Food items will be generated by JS -->
 </div>
+
+<a href="index.html" style="display:inline-block; margin: 20px 0; padding: 10px 20px; background-color:#d35400; color:#fff; text-decoration:none; border-radius:5px;">
+  ← Back to Home
+</a>
+
+
+<!-- Details section -->
+<div id="food-detail">
+  <button class="close-btn" onclick="closeDetail()">Close</button>
+  <h2 id="detail-name"></h2>
+  <img id="detail-img" src="" alt="" />
+  <p id="detail-desc"></p>
+  <p class="price" id="detail-price"></p>
+</div>
+
+<script>
+  // Food items data
+
+  
+
+  const foodData = [
+  {
+    id: 'classic-burger',
+    name: 'Classic Burger',
+    price: '$8.99',
+    img: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80',
+    desc: 'A delicious classic burger with fresh lettuce, tomato, cheese, and a juicy beef patty.'
+    
+  },
+  {
+    id: 'pepperoni-pizza',
+    name: 'Pepperoni Pizza',
+    price: '$12.99',
+    img: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=400&q=80',
+    desc: 'A cheesy pepperoni pizza topped with savory slices of pepperoni and fresh tomato sauce.'
+  },
+  {
+    id: 'spaghetti-carbonara',
+    name: 'Spaghetti Carbonara',
+    price: '$10.50',
+    img: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80',
+    desc: 'Creamy spaghetti with eggs, cheese, pancetta, and pepper for a classic Italian taste.'
+  },
+  {
+    id: 'caesar-salad',
+    name: 'Caesar Salad',
+    price: '$7.00',
+    img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80',
+    desc: 'Fresh romaine lettuce with Caesar dressing, croutons, and Parmesan cheese.'
+  },
+  {
+    id: 'sushi-platter',
+    name: 'Sushi Platter',
+    price: '$15.99',
+    img: 'https://images.unsplash.com/photo-1572441710431-bb066a90401b?auto=format&fit=crop&w=400&q=80',
+    desc: 'An assortment of fresh sushi rolls with fish, rice, and vegetables.'
+  },
+  {
+    id: 'beef-tacos',
+    name: 'Beef Tacos',
+    price: '$9.50',
+    img: 'https://images.unsplash.com/photo-1514516870726-3b5e8f03ae5c?auto=format&fit=crop&w=400&q=80',
+    desc: 'Soft tortillas filled with seasoned beef, lettuce, cheese, and salsa.'
+  },
+  {
+    id: 'grilled-steak',
+    name: 'Grilled Steak',
+    price: '$18.99',
+    img: 'https://images.unsplash.com/photo-1506354666786-959d6d497f1a?auto=format&fit=crop&w=400&q=80',
+    desc: 'Juicy grilled steak cooked to perfection with herbs and spices.'
+  },
+  {
+    id: 'vanilla-ice-cream',
+    name: 'Vanilla Ice Cream',
+    price: '$4.50',
+    img: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=400&q=80',
+    desc: 'Smooth and creamy vanilla ice cream, perfect for dessert.'
+  },
+  {
+    id: 'french-fries',
+    name: 'French Fries',
+    price: '$3.99',
+    img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80',
+    desc: 'Golden crispy French fries, lightly salted.'
+  },
+  {
+    id: 'fluffy-pancakes',
+    name: 'Fluffy Pancakes',
+    price: '$6.99',
+    img: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=400&q=80',
+    desc: 'Soft and fluffy pancakes served with syrup and butter.'
+  },
+  {
+    id: 'club-sandwich',
+    name: 'Club Sandwich',
+    price: '$8.00',
+    img: 'https://images.unsplash.com/photo-1543779501-d7e5219d7b1f?auto=format&fit=crop&w=400&q=80',
+    desc: 'Triple-layered sandwich with turkey, bacon, lettuce, tomato, and mayo.'
+  },
+  {
+    id: 'tomato-soup',
+    name: 'Tomato Soup',
+    price: '$5.50',
+    img: 'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=400&q=80',
+    desc: 'Warm and comforting tomato soup made with fresh tomatoes and herbs.'
+  },
+  {
+    id: 'fried-rice',
+    name: 'Fried Rice',
+    price: '$9.00',
+    img: 'https://images.unsplash.com/photo-1565895405227-d55fc0e3f745?auto=format&fit=crop&w=400&q=80',
+    desc: 'Stir-fried rice with vegetables, eggs, and soy sauce.'
+  },
+  {
+    id: 'chocolate-donut',
+    name: 'Chocolate Donut',
+    price: '$3.00',
+    img: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=400&q=80',
+    desc: 'Soft donut coated with rich chocolate glaze.'
+  },
+  {
+    id: 'penne-arrabiata',
+    name: 'Penne Arrabiata',
+    price: '$11.25',
+    img: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80',
+    desc: 'Penne pasta tossed in spicy tomato sauce with garlic and chili flakes.'
+  }
+];
+
+
+  const menuContainer = document.getElementById('menu');
+  const detailSection = document.getElementById('food-detail');
+  const detailName = document.getElementById('detail-name');
+  const detailImg = document.getElementById('detail-img');
+  const detailDesc = document.getElementById('detail-desc');
+  const detailPrice = document.getElementById('detail-price');
+
+  // मेनू के लिए HTML जनरेट करें
+  foodData.forEach(food => {
+    const foodDiv = document.createElement('div');
+    foodDiv.className = 'food-item';
+    foodDiv.innerHTML = `
+      <img class="food-img" src="${food.img}" alt="${food.name}" />
+      <div class="food-info">
+        <h3 class="food-name">${food.name}</h3>
+        <p class="food-price">${food.price}</p>
+      </div>
+    `;
+    foodDiv.onclick = () => showDetail(food.id);
+    menuContainer.appendChild(foodDiv);
+  });
+
+  function showDetail(id) {
+    const food = foodData.find(f => f.id === id);
+    if(food){
+      detailName.textContent = food.name;
+      detailImg.src = food.img;
+      detailImg.alt = food.name;
+      detailDesc.textContent = food.desc;
+      detailPrice.textContent = food.price;
+      detailSection.style.display = 'block';
+      window.scrollTo({ top: detailSection.offsetTop - 20, behavior: 'smooth' });
+    }
+  }
+
+  function closeDetail() {
+    detailSection.style.display = 'none';
+  }
+</script>
 
 </body>
 </html>

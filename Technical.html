@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Technical Support - Restoran</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f8fafc;
+    }
+
+    .support-section {
+      padding: 60px 0;
+    }
+
+    .support-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .support-header h2 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #0f172a;
+    }
+
+    .support-info {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+
+    .support-info h5 {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .form-control,
+    .form-control:focus {
+      background-color: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      box-shadow: none;
+    }
+
+    .btn-submit {
+      background-color: #f59e0b;
+      color: white;
+      font-weight: 600;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .btn-submit:hover {
+      background-color: #d97706;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container support-section">
+  <div class="support-header">
+    <h2>Technical Support</h2>
+    <p class="text-muted">तकनीकी सहायता के लिए नीचे संपर्क करें या फॉर्म भरें</p>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <div class="support-info">
+        <h5>📍 Office Address</h5>
+        <p>Plot 21, Tech Park, Jaipur, Rajasthan</p>
+
+        <h5>📧 Support Email</h5>
+        <p>support@restoran.com</p>
+
+        <h5>📞 Support Phone</h5>
+        <p>+91 99999 11111</p>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" id="name" class="form-control" placeholder="Enter your name" required/>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Your Email</label>
+          <input type="email" id="email" class="form-control" placeholder="Enter your email" required/>
+        </div>
+        <div class="mb-3">
+          <label for="issue" class="form-label">Issue Type</label>
+          <select class="form-select" id="issue" required>
+            <option selected disabled value="">Select Issue</option>
+            <option>Website Not Working</option>
+            <option>Login Problem</option>
+            <option>Order Issue</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Describe Your Issue</label>
+          <textarea id="message" rows="5" class="form-control" placeholder="Write your issue here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-submit">Submit Ticket</button>
+           <a href="index.html" style="display:inline-block; margin: 20px 0; padding: 10px 20px; background-color:#d35400; color:#fff; text-decoration:none; border-radius:5px;">
+  ← Back to Home
+</a>
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+
+<script>
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    alert(' आपका फॉर्म   सफलतापूर्वक सबमिट हो गया। धन्यवाद!');
+    window.location.href = 'index.html';
+  });</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
